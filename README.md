@@ -13,6 +13,8 @@ Fill in a long URL, hit "Return" and a short URL will be created. Double click t
 
 Well, that's it, there's nothing more to it. I use this tool to quickly create new short URLs for my blogs or for Twitter.
 
+# [Download Bit.ly for Windows](https://github.com/dukeofharen/bitly-windows/raw/master/latest.zip)
+
 Features for the future:
 - Logging in with OAuth
 - Multiple URL shortening services
