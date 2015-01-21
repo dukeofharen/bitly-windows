@@ -1,4 +1,7 @@
 # Bit.ly client for Microsoft Windows
+
+# [Download Bit.ly for Windows](https://github.com/dukeofharen/bitly-windows/raw/master/latest.zip)
+
 A basic but very nice Bit.ly client for Windows. Bit.ly for Windows resides as an icon in your Windows system tray.
 
 ![Bit.ly resides in the Windows system tray](https://raw.githubusercontent.com/dukeofharen/bitly-windows/master/img/systemtray.jpg)
@@ -12,8 +15,6 @@ If you want to create a short URL, double click the system tray icon and this bo
 Fill in a long URL, hit "Return" and a short URL will be created. Double click the short URL and it will be copied to the clipboard.
 
 Well, that's it, there's nothing more to it. I use this tool to quickly create new short URLs for my blogs or for Twitter.
-
-# [Download Bit.ly for Windows](https://github.com/dukeofharen/bitly-windows/raw/master/latest.zip)
 
 Features for the future:
 - Logging in with OAuth
