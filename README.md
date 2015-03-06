@@ -20,3 +20,6 @@ Well, that's it, there's nothing more to it. I use this tool to quickly create n
 
 **Version 0.0.2**
 - Added error messages that make more sense.
+
+**Version 0.0.2.1**
+- Added error message for when the API key and username aren't set
