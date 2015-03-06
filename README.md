@@ -16,6 +16,7 @@ Fill in a long URL, hit "Return" and a short URL will be created. Double click t
 
 Well, that's it, there's nothing more to it. I use this tool to quickly create new short URLs for my blogs or for Twitter.
 
-Features for the future:
-- Logging in with OAuth
-- Multiple URL shortening services
+## Changelog
+
+**Version 0.0.2**
+- Added error messages that make more sense.

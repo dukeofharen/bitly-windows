@@ -1,4 +1,5 @@
-﻿using BitlyDotNET.Implementations;
+﻿using BitlyDotNET.Exceptions;
+using BitlyDotNET.Implementations;
 using BitlyDotNET.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -25,18 +26,40 @@ namespace BitlyWindows
             string longURL = longURLBox.Text;
             if (!string.IsNullOrEmpty(longURL))
             {
+				string msg = string.Empty;
                 try
                 {
-                    shortURLBox.Text = Logic.ShortenURL(longURL);
+					if (!longURL.StartsWith("http"))
+					{
+						msg = Properties.Resources.invalidUrl;
+					}
+					else
+					{
+						shortURLBox.Text = Logic.ShortenURL(longURL);
+					}
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(Properties.Resources.shortenError, "URL", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+				catch (BitlyDotNETException ex)
+				{
+
+				}
+				catch (Exception ex)
+				{
+					if (ex.Message.Contains("Invalid absolute URL"))
+					{
+						msg = Properties.Resources.invalidUrl;
+					}
+				}
+				finally
+				{
+					if (!string.IsNullOrEmpty(msg))
+					{
+						MessageBox.Show(msg, Properties.Resources.url, MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
+				}
             }
             else
             {
-                MessageBox.Show("You should fill in a URL.", "URL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Properties.Resources.fillInUrl, Properties.Resources.url, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -50,7 +73,10 @@ namespace BitlyWindows
 
         private void shortURLBox_DoubleClick(object sender, EventArgs e)
         {
-            Clipboard.SetText(shortURLBox.Text);
+			if (!string.IsNullOrEmpty(shortURLBox.Text))
+			{
+				Clipboard.SetText(shortURLBox.Text);
+			}
         }
     }
 }

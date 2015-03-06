@@ -117,7 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="fillInUrl" xml:space="preserve">
+    <value>You should fill in a URL.</value>
+  </data>
+  <data name="invalidUrl" xml:space="preserve">
+    <value>Please fill in a correct URL</value>
+  </data>
   <data name="shortenError" xml:space="preserve">
     <value>Something went wrong. Maybe you have no internet connection or your username and API key are wrong.</value>
+  </data>
+  <data name="url" xml:space="preserve">
+    <value>URL</value>
   </data>
 </root>

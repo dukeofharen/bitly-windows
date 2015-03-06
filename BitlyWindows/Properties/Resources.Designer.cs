@@ -61,11 +61,38 @@ namespace BitlyWindows.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You should fill in a URL..
+        /// </summary>
+        internal static string fillInUrl {
+            get {
+                return ResourceManager.GetString("fillInUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please fill in a correct URL.
+        /// </summary>
+        internal static string invalidUrl {
+            get {
+                return ResourceManager.GetString("invalidUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Something went wrong. Maybe you have no internet connection or your username and API key are wrong..
         /// </summary>
         internal static string shortenError {
             get {
                 return ResourceManager.GetString("shortenError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to URL.
+        /// </summary>
+        internal static string url {
+            get {
+                return ResourceManager.GetString("url", resourceCulture);
             }
         }
     }
