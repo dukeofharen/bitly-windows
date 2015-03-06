@@ -40,7 +40,7 @@ namespace BitlyWindows
                 }
 				catch (BitlyDotNETException ex)
 				{
-
+					msg = Properties.Resources.shortenError;
 				}
 				catch (Exception ex)
 				{
